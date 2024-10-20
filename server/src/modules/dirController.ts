@@ -38,11 +38,10 @@ class DirController {
             return next();
         }
         const orderBy = req.query.orderBy;
-        console.log(orderBy);
         try {
             const dir = await dirService.getDirectoryById(dirId, req.transaction);
             const childList = await dirService.getAllDirByParentId(dirId, orderBy?.toString());
-            return res.success(SUCCESS_CODES.READ.code, { ...dir.dataValues, list: childList });
+            return res.success(SUCCESS_CODES.READ.code, { ...dir?.dataValues, list: childList });
         } catch (err: any) {
             next(new AppError(err));
         }

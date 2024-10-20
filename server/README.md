@@ -23,14 +23,28 @@ cd <repository_folder>
 After navigating into the project directory, install the required dependencies using pnpm:
 
 ```bash
-cd app
+cd server
 pnpm install
 ```
 
-### 3. Run the Server
+### 3. Create Environment File
+Create a .env.dev file in the root of your project and add the following environment variables:
+
+```bash
+NODE_ENV='development'
+PORT=8000
+PG_USER='user_name'
+PG_HOST='host'
+PG_DB_NAME='dbname'
+PG_PASSWORD='password'
+DIALECT='postgres'
+```
+Make sure to replace the placeholders (user_name, host, dbname, and password) with your actual PostgreSQL database credentials.
+
+4. Run the Server
 To start the development server, run the following command:
 
 ```bash
-pnpm start
+pnpm run dev
 ```
-The server should now be running at http://localhost:3000.
+The server should now be running at http://localhost:8000.

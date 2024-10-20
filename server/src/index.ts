@@ -16,7 +16,6 @@ app.use(cors());
 app.use(successResponseMiddleware);
 // Middleware
 app.use(bodyParser.json());
-console.log(process.env.PG_PASSWORD);
 
 app.get('/', (req, res) => res.status(200).json({ message: "all good" }));
 
