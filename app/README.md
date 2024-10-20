@@ -1,6 +1,6 @@
-# Node.js Project Setup
+# React App Front end Setup
 
-This is a Node.js project using PostgreSQL as the database. Below are the steps to set up the project locally.
+This is a React js based Front end app for directory management. Below are the steps to set up the project locally.
 
 ## Prerequisites
 
